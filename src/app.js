@@ -44,7 +44,7 @@ function bindEvents() {
   const sortSelect = qs('sortSelect');
   if (sortSelect) {
     sortSelect.addEventListener('change', (e) => {
-    setSortMode(e.target.value);
+    setSortMode(e.target.value;
     render();
   });
   }
