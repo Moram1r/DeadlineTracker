@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Дедлайны</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Дедлайны</h1>
+      <div class="controls">
+        <label class="control">
+          <span>Сортировка</span>
+          <select id="sortSelect">
+            <option value="date">По дате</option>
+            <option value="tagAsc">По тегу (возр.)</option>
+            <option value="tagDesc">По тегу (убыв.)</option>
+          </select>
+        </label>
+        <div class="tabs" id="viewTabs" role="tablist">
+          <button id="tabActive" role="tab" aria-selected="true" data-view="active">Активные</button>
+          <button id="tabCompleted" role="tab" aria-selected="false" data-view="completed">Завершенные</button>
+        </div>
+        <button id="manageTagsBtn" class="secondary">Теги</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="addFormContainer" class="section"></section>
+      <section id="listContainer" class="section" aria-live="polite"></section>
+    </main>
+
+    <dialog id="editDialog" aria-label="Редактировать задачу"></dialog>
+    <dialog id="tagsDialog" aria-label="Управление тегами"></dialog>
+
+    <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Для надежной работы по file:// можно использовать собранный self-contained скрипт ниже. -->
+    <script src="dist/app.js"></script>
+    <!-- Или модульная версия (раскомментируйте при запуске с http-сервера): -->
+    <!-- <script type="module" src="src/app.js"></script> -->
+  </body>
+  </html>
