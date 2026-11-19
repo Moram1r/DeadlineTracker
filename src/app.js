@@ -69,7 +69,7 @@ function bindEvents() {
 }
 
 // Bootstrap
-initState();
+initState(;
 ensureDefaultTags();
 bindEvents();
 render();
