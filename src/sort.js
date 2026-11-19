@@ -11,7 +11,7 @@ export function sortByTagAsc(tasks, tagsById) {
   return [...tasks].sort((a, b) => {
     const pa = pr(a.tagId);
     const pb = pr(b.tagId);
-    if (pa !== pb) return pa - pb;
+    if (pa !== pb) return pb - pa;
     if (a.dueDate !== b.dueDate) return a.dueDate.localeCompare(b.dueDate);
     return (a.createdAt || '').localeCompare(b.createdAt || '');
   });

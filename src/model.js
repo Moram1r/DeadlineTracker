@@ -26,7 +26,7 @@ export function validateTask(task) {
   if (!task.text || !task.text.trim()) errors.text = 'Введите текст задачи';
   if (!task.dueDate) errors.dueDate = 'Выберите дату';
   if (!task.tagId) errors.tagId = 'Выберите тег';
-  if (task.text && task.text.length > 200) errors.text = 'Не более 200 символов';
+  if (task.text && task.text.length > 100) errors.text = 'Не более 100 символов';
   return { ok: Object.keys(errors).length === 0, errors };
 }
 
